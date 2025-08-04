@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCalc - Modern Calculator</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="row w-100 justify-content-center">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3">
+                <!-- Calculator Container -->
+                <div class="calculator-container">
+                    <!-- Header -->
+                    <div class="calculator-header text-center mb-3">
+                        <h1 class="calculator-title">
+                            <i class="fas fa-calculator me-2"></i>
+                            SmartCalc
+                        </h1>
+                        <p class="calculator-subtitle"></p>
+                    </div>
+
+                    <!-- Calculator Body -->
+                    <div class="calculator-body">
+                        <!-- Display Screen -->
+                        <div class="display-container mb-3">
+                            <div class="display-screen">
+                                <div class="display-history" id="history"></div>
+                                <div class="display-current" id="display">0</div>
+                            </div>
+                        </div>
+
+                        <!-- Button Grid -->
+                        <div class="button-grid">
+                            <!-- Row 1: AC, ±, %, ÷ -->
+                            <button class="btn-calc btn-function" data-action="clear">AC</button>
+                            <button class="btn-calc btn-function" data-action="toggle-sign">±</button>
+                            <button class="btn-calc btn-operator" data-operator="%">%</button>
+                            <button class="btn-calc btn-operator" data-operator="/">÷</button>
+
+                            <!-- Row 2: 7, 8, 9, × -->
+                            <button class="btn-calc btn-number" data-number="7">7</button>
+                            <button class="btn-calc btn-number" data-number="8">8</button>
+                            <button class="btn-calc btn-number" data-number="9">9</button>
+                            <button class="btn-calc btn-operator" data-operator="*">×</button>
+
+                            <!-- Row 3: 4, 5, 6, - -->
+                            <button class="btn-calc btn-number" data-number="4">4</button>
+                            <button class="btn-calc btn-number" data-number="5">5</button>
+                            <button class="btn-calc btn-number" data-number="6">6</button>
+                            <button class="btn-calc btn-operator" data-operator="-">-</button>
+
+                            <!-- Row 4: 1, 2, 3, + -->
+                            <button class="btn-calc btn-number" data-number="1">1</button>
+                            <button class="btn-calc btn-number" data-number="2">2</button>
+                            <button class="btn-calc btn-number" data-number="3">3</button>
+                            <button class="btn-calc btn-operator" data-operator="+">+</button>
+
+                            <!-- Row 5: x², 0, ., = -->
+                            <button class="btn-calc btn-function" data-action="square">x²</button>
+                            <button class="btn-calc btn-number btn-zero" data-number="0">0</button>
+                            <button class="btn-calc btn-function" data-action="decimal">.</button>
+                            <button class="btn-calc btn-equals" data-action="calculate">=</button>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="calculator-footer text-center mt-3">
+                        <small class="text-muted">
+                            <i class="fas fa-code me-1"></i>
+                            
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
